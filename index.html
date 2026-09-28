@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Next - Ta voix compte</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #111827, #1e3a8a);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(15px);
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin: 10px 0 30px;
+            opacity: 0.8;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 8px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: #3b82f6;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+            background: #2563eb;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">🗳️</div>
+
+        <h1>PROJECT NEXT</h1>
+
+        <p class="subtitle">
+            Notre classe, notre voix.
+        </p>
+
+        <form id="ideaForm">
+
+            <label for="nom">Nom</label>
+            <input 
+                type="text" 
+                id="nom" 
+                placeholder="Ton nom"
+                required
+            >
+
+            <label for="prenom">Prénom</label>
+            <input 
+                type="text" 
+                id="prenom" 
+                placeholder="Ton prénom"
+                required
+            >
+
+            <label for="idee">💡 Idée ou problème</label>
+
+            <textarea 
+                id="idee"
+                placeholder="Écris ton idée ou explique ton problème..."
+                required
+            ></textarea>
+
+            <button type="submit">
+                🚀 ENVOYER
+            </button>
+
+        </form>
+
+        <div class="footer">
+            Votre voix compte.
+        </div>
+
+    </div>
+
+</body>
+</html>
