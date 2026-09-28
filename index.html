@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Project Next - Ta voix compte</title>
 
     <style>
@@ -14,8 +15,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #111827, #1e3a8a);
             min-height: 100vh;
+            background: linear-gradient(135deg, #111827, #1e40af);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,49 +26,58 @@
 
         .container {
             width: 100%;
-            max-width: 500px;
-            background: rgba(255,255,255,0.1);
+            max-width: 520px;
+            background: rgba(255, 255, 255, 0.10);
             backdrop-filter: blur(15px);
             padding: 35px;
             border-radius: 25px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
         }
 
         .logo {
             text-align: center;
-            font-size: 45px;
+            font-size: 50px;
             margin-bottom: 10px;
         }
 
         h1 {
             text-align: center;
             font-size: 32px;
+            margin-bottom: 8px;
         }
 
         .subtitle {
             text-align: center;
-            margin: 10px 0 30px;
             opacity: 0.8;
+            margin-bottom: 30px;
         }
 
         label {
             display: block;
-            margin: 15px 0 8px;
+            margin-top: 18px;
+            margin-bottom: 8px;
             font-weight: bold;
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
             padding: 14px;
             border: none;
             border-radius: 12px;
             font-size: 16px;
             outline: none;
+            font-family: Arial, sans-serif;
         }
 
         textarea {
-            height: 140px;
+            min-height: 140px;
             resize: vertical;
+        }
+
+        input:focus,
+        textarea:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
         }
 
         button {
@@ -85,15 +95,15 @@
         }
 
         button:hover {
-            transform: scale(1.02);
             background: #2563eb;
+            transform: translateY(-2px);
         }
 
         .footer {
             text-align: center;
             margin-top: 25px;
             font-size: 13px;
-            opacity: 0.6;
+            opacity: 0.65;
         }
     </style>
 </head>
@@ -110,28 +120,33 @@
             Notre classe, notre voix.
         </p>
 
-        <form id="ideaForm">
+        <form action="https://formspree.io/f/mrpbrqja" method="POST">
 
             <label for="nom">Nom</label>
-            <input 
-                type="text" 
-                id="nom" 
+
+            <input
+                type="text"
+                id="nom"
+                name="Nom"
                 placeholder="Ton nom"
                 required
             >
 
             <label for="prenom">Prénom</label>
-            <input 
-                type="text" 
-                id="prenom" 
+
+            <input
+                type="text"
+                id="prenom"
+                name="Prénom"
                 placeholder="Ton prénom"
                 required
             >
 
             <label for="idee">💡 Idée ou problème</label>
 
-            <textarea 
+            <textarea
                 id="idee"
+                name="Idée ou problème"
                 placeholder="Écris ton idée ou explique ton problème..."
                 required
             ></textarea>
